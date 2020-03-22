@@ -9,46 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script>
-        window.onload = function () {
 
-            var dps = [];
-            var chart = new CanvasJS.Chart("chartContainer", {
-                animationEnabled: true,
-                exportEnabled: true,
-                title: {
-                    text: "Investment Portfolio"
-                },
-                axisX: {
-                    valueFormatString: "DD MMM" // THIS CAN CHANGE TO 1D, 1W, 6M, 1YR, 5YR, 10YR
-                },
-                axisY: {
-                    title: "Price",
-                    includeZero: false,
-                    prefix: "$"
-                },
-                data: [{
-                    type: "ohlc",
-                    xValueType: "dateTime",
-                    dataPoints: dps
-                }]
-            });
-
-            $.getJSON("https://canvasjs.com/data/gallery/javascript/intel-stock-price.json", parseData);
-
-            function parseData(result) {
-                for (var i = 0; i < result.length; i++) {
-                    dps.push({
-                        x: result[i].x,
-                        y: result[i].y
-                    });
-                }
-                chart.render();
-            }
-
-        }
-    </script>
-    <title>Dashboard</title>
+    <title>Currency Exchange</title> 
 </head>
 
 <body>
@@ -58,20 +20,22 @@
         </div>
     </div>
 
-    <br>
-    <br>
+<!-- PUT PAGE CONTENT HERE -->
 
-    <div class="container">
+<div class="container">
 
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom" id="nav">
-            <a class="navbar-brand" id="page">Dashboard</a>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom" id="nav">
+        <a class="navbar-brand" id="page">Currency Exchange</a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="container text-center collapse navbar-collapse fixed-bottom col-sm-6" id="collapsibleNavbar">
+        <div class="container text-center collapse navbar-collapse fixed-bottom col-sm-6" id="collapsibleNavbar">
                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Dashboard</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="stocks.html">Stocks</a>
                     </li>
@@ -85,9 +49,6 @@
                         <a class="nav-link" href="cryptoCurrency.html">Crypto Currency</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="currencyExchange.html">Currency Exchange</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="news.html">News</a>
                     </li>
                     <li class="nav-item">
@@ -97,12 +58,13 @@
             </div>
 
             <div class="col-3">
-
                 <div class="container text-center">
+
                     <form class="form-inline" action="/action_page.php">
                         <input class="form-control mr-sm-2" id="search-icon" type="text" placeholder="Search Stocks">
                         <button class="btn btn-warning" type="submit">Search</button>
                     </form>
+                    
                 </div>
             </div>
 
@@ -111,12 +73,6 @@
     </div>    
 
 </div>
-
-    <div class="container text-center" id="chartContainer" style="height: 550px; width: 50%"></div>
-
-    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-
-    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
 </body>
 
