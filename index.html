@@ -9,50 +9,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script>
-        window.onload = function () {
-
-            var dps = [];
-            var chart = new CanvasJS.Chart("chartContainer", {
-                animationEnabled: true,
-                exportEnabled: true,
-                title: {
-                    text: "Investment Portfolio"
-                },
-                axisX: {
-                    valueFormatString: "DD MMM" // THIS CAN CHANGE TO 1D, 1W, 6M, 1YR, 5YR, 10YR
-                },
-                axisY: {
-                    title: "Price",
-                    includeZero: false,
-                    prefix: "$"
-                },
-                data: [{
-                    type: "ohlc",
-                    xValueType: "dateTime",
-                    dataPoints: dps
-                }]
-            });
-
-            $.getJSON("https://canvasjs.com/data/gallery/javascript/intel-stock-price.json", parseData);
-
-            function parseData(result) {
-                for (var i = 0; i < result.length; i++) {
-                    dps.push({
-                        x: result[i].x,
-                        y: result[i].y
-                    });
-                }
-                chart.render();
-            }
-
-        }
-    </script>
+    
     <title>Dashboard</title>
 </head>
 
 <body>
-    <div class="jumbotron text-center" style="margin-bottom: 0;">
+    <div class="jumbotron jumbotron-fluid text-center" `">
         <div class="container">
             <h1>$tock Market Wonderland</h1>
         </div>
@@ -97,13 +59,7 @@
             </div>
 
             <div class="col-3">
-
-                <div class="container text-center">
-                    <form class="form-inline" action="/action_page.php">
-                        <input class="form-control mr-sm-2" id="search-icon" type="text" placeholder="Search Stocks">
-                        <button class="btn btn-warning" type="submit">Search</button>
-                    </form>
-                </div>
+                <div class="container text-center"></div>
             </div>
 
         </nav>

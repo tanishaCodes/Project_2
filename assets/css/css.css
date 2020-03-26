@@ -66,18 +66,25 @@ body {
     position: absolute;
     top: 0;
     left: 0%;
-    right: 0%;
+    right: 6%;
     bottom: 0;
     margin: auto;
 }
 
-nav {
+#nav {
     width: 100%;
-    padding: 0px;
+    padding-left: 100px;
 }
+
 
 #page {
     font-size: xx-large;
+}
+
+.market-widget {
+    position: left;
+    width: 580;
+    height: 510;
 }
 
 /* Extra small devices (phones, 600px and down) */

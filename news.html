@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
 
     <title>News</title> 
 </head>
@@ -21,6 +22,10 @@
     </div>
     
 <!-- PUT PAGE CONTENT HERE -->
+<!-- NEWS WIDGET-->
+
+<div class="tradingview-widget-container">
+<div class="news-text-center">Economic Calendar</div></div>
 
 <div class="container">
 
@@ -60,7 +65,7 @@
             <div class="col-3">
                 <div class="container text-center">
                     <form class="form-inline" action="/action_page.php">
-                        <input class="form-control mr-sm-2" id="search-icon" type="text" placeholder="Search Stocks">
+                        <input class="form-control mr-sm-2" id="search-icon" type="text" placeholder="Search Market News">
                         <button class="btn btn-warning" type="submit">Search</button>
                     </form>
                 </div>
@@ -72,6 +77,18 @@
     
 </div>
 
+<!-- TradingView Widget BEGIN -->
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+    {
+    "colorTheme": "light",
+    "isTransparent": false,
+    "width": "510",
+    "height": "600",
+    "locale": "en",
+    "importanceFilter": "-1,0,1"
+  }
+    </script>
+  <!-- TradingView Widget END -->
 </body>
 
 </html>
