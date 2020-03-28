@@ -83,8 +83,17 @@ body {
 
 .market-widget {
     position: left;
-    width: 580;
-    height: 510;
+    width: 580px;
+    height: 510px;
+}
+
+#crypto-widget {
+    width: 1000px;
+    height: 500px;
+    position: center;
+    padding-left: 0px;
+    padding-right: 1000px;
+
 }
 
 /* Extra small devices (phones, 600px and down) */
