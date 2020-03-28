@@ -1,3 +1,30 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+.container > h1 {
+  color: transparent;
+  background: #757575;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+  font-size: 50px;
+}
+
+.jumbotron {
+  background: rgb(103,166,95);
+background: -moz-radial-gradient(circle, rgba(103,166,95,0.7049194677871149) 0%, rgba(82,82,82,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(103,166,95,0.7049194677871149) 0%, rgba(82,82,82,1) 100%);
+background: radial-gradient(circle, rgba(103,166,95,0.7049194677871149) 0%, rgba(82,82,82,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#67a65f",endColorstr="#525252",GradientType=1);
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.navbar {
+  background: rgb(103,166,95);
+  background: -moz-linear-gradient(0deg, rgba(103,166,95,0.7497373949579832) 0%, rgba(82,82,82,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(103,166,95,0.7497373949579832) 0%, rgba(82,82,82,1) 100%);
+  background: linear-gradient(0deg, rgba(103,166,95,0.7497373949579832) 0%, rgba(82,82,82,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#67a65f",endColorstr="#525252",GradientType=1);
+}
