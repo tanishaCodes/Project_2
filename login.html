@@ -48,6 +48,30 @@
         z.style.left = "0px";
     }
 
+    import * as firebase from "firebase/app";
+        
+        // If you enabled Analytics in your project, add the Firebase SDK for Analytics
+        import "firebase/analytics";
+        
+        // Add the Firebase products that you want to use
+        import "firebase/auth";
+        import "firebase/firestore";
+        
+        const firebaseConfig = {
+  apiKey: "AIzaSyDfie68qjuqqP3UL7Z83us73XbmeRNP27A",
+  authDomain: "stock-market-wonderland.firebaseapp.com",
+  databaseURL: "https://stock-market-wonderland.firebaseio.com",
+  projectId: "stock-market-wonderland",
+  storageBucket: "stock-market-wonderland.appspot.com",
+  messagingSenderId: "971961917666",
+  appId: "1:971961917666:web:9377971a0a1e1ce2917ebb",
+  measurementId: "G-NN14M41S4J"
+};
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
 
     </script>
 </body>    
