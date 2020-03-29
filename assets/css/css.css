@@ -81,20 +81,41 @@ body {
     font-size: xx-large;
 }
 
+/* DASHBOARD PAGE */
 .market-widget {
     position: left;
     width: 580px;
     height: 510px;
 }
+/* Dashboard: END */
 
+/* STOCKS PAGE */
+/* Body */
+.stock-column {
+    flex: 50%;
+    position: relative;
+    padding-left: 100px;
+}
+
+/* Widgets */
+.top-column  {
+    flex: 50%;
+    position: relative;
+    padding-left: 100px;
+      }
+/* Stock Widgets: END */
+
+
+/* CRYPTO CURRENCY PAGE */
+/* Widgets */
 #crypto-widget {
     width: 1000px;
     height: 500px;
     position: center;
     padding-left: 0px;
     padding-right: 1000px;
-
 }
+/* Crypto Currency: END */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

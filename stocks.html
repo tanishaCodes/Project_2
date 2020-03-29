@@ -19,12 +19,12 @@
             <h1>$tock Market Wonderland</h1>
         </div>
     </div>
-    <br>
-    <br>
 
 <!-- PUT PAGE CONTENT HERE -->
-<div class="container">
-    <h1 class="column">Search Stocks</h1>
+<div class="text-right stock-column container">
+<div class="container col-sm-8">
+    <div class="stock-search-info">Stock Search Info From API Displays Here (Delete)</div>
+</div>
 </div>
 
     <div class="container">
@@ -65,7 +65,7 @@
             <div class="col-3">
                 <div class="container text-center">
                     <form class="form-inline" action="/action_page.php">
-                        <input class="form-control mr-sm-2" id="search-icon" type="text" placeholder="Search Stocks">
+                        <input class="form-control mr-sm-2" id="search-icon" type="text" aria-placeholder="Search Stocks">
                         <button class="btn btn-warning" type="submit">Search</button>
                     </form>
                 </div>
@@ -75,6 +75,32 @@
 
     </div>    
     
+</div>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container top-column">
+<h3 class="text-right col-sm-10">Top Stocks</h3>
+
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
+  {
+  "colorTheme": "light",
+  "dateRange": "1d",
+  "exchange": "US",
+  "showChart": true,
+  "locale": "en",
+  "largeChartUrl": "",
+  "isTransparent": false,
+  "width": "500",
+  "height": "465",
+  "plotLineColorGrowing": "rgba(56, 118, 29, 1)",
+  "plotLineColorFalling": "rgba(255, 0, 0, 1)",
+  "gridLineColor": "rgba(240, 243, 250, 1)",
+  "scaleFontColor": "rgba(120, 123, 134, 1)",
+  "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+  "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+  "symbolActiveColor": "rgba(33, 150, 243, 0.12)"
+}
+  </script>
 </div>
 
 </body>
