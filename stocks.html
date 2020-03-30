@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link href="assets/css/css.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/styles/css.css">
     <link rel="stylesheet" href="public/styles/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <title>Stocks</title> 
+
 </head>
 
 <body>
@@ -24,7 +24,7 @@
 <!-- PUT PAGE CONTENT HERE -->
 <div class="text-right stock-column container">
 <div class="container col-sm-8">
-    <div class="stock-search-info">Stock Search Info From API Displays Here (Delete)</div>
+    <div id="stock-details"></div>
 </div>
 </div>
 
@@ -66,8 +66,8 @@
             <div class="col-3">
                 <div class="container text-center">
                     <form class="form-inline" action="/action_page.php">
-                        <input class="form-control mr-sm-2" id="search-icon" type="text" aria-placeholder="Search Stocks">
-                        <button class="btn btn-warning stocks-search-button" type="submit">Search</button>
+                        <input class="form-control mr-sm-2" id="search-icon" type="text" placeholder="Search Stocks">
+                        <button class="btn stocks-search-button" type="submit">Search</button>
                     </form>
                 </div>
             </div>
@@ -103,6 +103,15 @@
 }
   </script>
 </div>
+
+    <!-- IMPORTED AXIOS LIBRARY -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- QUERYSTRING LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.7.0/qs.min.js"></script>
+
+    <!-- IMORTED JS FILE -->
+    <script src="stocks.js"></script>
 
 </body>
 

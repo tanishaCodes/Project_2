@@ -117,6 +117,13 @@ body {
 }
 /* Crypto Currency: END */
 
+/* PROFILE PAGE */
+.text-font {
+    font-size: x-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     
