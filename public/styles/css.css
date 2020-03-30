@@ -4,7 +4,7 @@
 */
 
 html, body, div, span, applet, object, iframe,
-h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -119,8 +119,8 @@ body {
     width: 1000px;
     height: 500px;
     position: center;
-    padding-left: 0px;
-    padding-right: 1000px;
+    padding-left: 500px;
+    padding-right: 500px;
 }
 /* Crypto Currency: END */
 
