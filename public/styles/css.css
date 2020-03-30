@@ -91,20 +91,27 @@ body {
 
 /* STOCKS PAGE */
 /* Body */
-.stock-column {
+.top-stocks {
     flex: 50%;
     position: relative;
     padding-left: 100px;
 }
 
 /* Widgets */
-.top-column  {
+.stocks-watchlist  {
     flex: 50%;
     position: relative;
     padding-left: 100px;
       }
 /* Stock Widgets: END */
 
+/* MUTUAL FUNDS */
+.soon {
+    flex: 50px;
+    position: relative;
+    padding-top: 225px;
+}
+/* Mutual Funds: END */
 
 /* CRYPTO CURRENCY PAGE */
 /* Widgets */
@@ -117,11 +124,22 @@ body {
 }
 /* Crypto Currency: END */
 
+/* CURRENCY EXCHANGE */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 25px;
+  }
+/* Currency Exchange: END */
+
 /* PROFILE PAGE */
 .text-font {
     font-size: x-large;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+/* Profile: END */
 
 
 /* Extra small devices (phones, 600px and down) */
