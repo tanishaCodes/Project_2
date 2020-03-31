@@ -5,7 +5,7 @@ var exphbs = require("express-handlebars");
 var db = require("./models");
 
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -24,6 +24,49 @@ app.set("view engine", "handlebars");
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+
+app.get('/', (reg, res) => {
+  res.render('index', { 
+    title: 'Dashboard' 
+  });
+});
+
+app.get('/', (reg, res) => {
+  res.render('stocks', { 
+    title: 'Stocks' 
+  });
+});
+
+app.get('/', (reg, res) => {
+  res.render('mutual funds', { 
+    title: 'Mutual Funds' 
+  });
+});
+
+app.get('/', (reg, res) => {
+  res.render('crypto currency', { 
+    title: 'Crypto Currency' 
+  });
+});
+
+app.get('/', (reg, res) => {
+  res.render('currency exchange', { 
+    title: 'Currency Exchange' 
+  });
+});
+
+app.get('/', (reg, res) => {
+  res.render('news', { 
+    title: 'News'
+  });
+});
+
+app.get('/', (reg, res) => {
+  res.render('profile', { 
+    title: 'Profile' 
+  });
+});
+
 
 var syncOptions = { force: false };
 
