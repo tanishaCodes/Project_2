@@ -5,7 +5,7 @@ var exphbs = require("express-handlebars");
 var db = require("./models");
 
 var app = express();
-var PORT = process.env.PORT || 5000;
+var PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -13,60 +13,56 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
+app.engine("handlebars", exphbs({ 
+    defaultLayout: "main" 
+}));
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
-
-app.get('/', (reg, res) => {
+app.get('/', (req, res) => {
   res.render('index', { 
     title: 'Dashboard' 
   });
 });
 
-app.get('/', (reg, res) => {
+app.get('/stocks', (req, res) => {
   res.render('stocks', { 
     title: 'Stocks' 
   });
 });
 
-app.get('/', (reg, res) => {
-  res.render('mutual funds', { 
+app.get('/mutualFunds', (req, res) => {
+  res.render('mutualFunds', { 
     title: 'Mutual Funds' 
   });
 });
 
-app.get('/', (reg, res) => {
-  res.render('crypto currency', { 
+app.get('/crypto', (req, res) => {
+  res.render('cryptoCurrency', { 
     title: 'Crypto Currency' 
   });
 });
 
-app.get('/', (reg, res) => {
-  res.render('currency exchange', { 
+app.get('/exchange', (req, res) => {
+  res.render('currencyExchange', { 
     title: 'Currency Exchange' 
   });
 });
 
-app.get('/', (reg, res) => {
+app.get('/news', (req, res) => {
   res.render('news', { 
     title: 'News'
   });
 });
 
-app.get('/', (reg, res) => {
+app.get('/profile', (req, res) => {
   res.render('profile', { 
     title: 'Profile' 
   });
 });
 
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
 
 var syncOptions = { force: false };
 
@@ -78,9 +74,9 @@ if (process.env.NODE_ENV === "test") {
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
+  app.listen(PORT, () => {
     console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+      " 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
       PORT
     );

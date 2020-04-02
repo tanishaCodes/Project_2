@@ -1,10 +1,10 @@
-var db = require("../models");
+var db = require("../models/example.js"); //Change this to the file with the db info
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  app.get("/", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) { // Change Example to the sequelize.define name
+      res.json(dbExamples); // Change to the dbexample to sequelize.define name
     });
   });
 

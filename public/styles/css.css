@@ -141,6 +141,17 @@ body {
 }
 /* Profile: END */
 
+/* 404 PAGE */
+/* Button */
+.myButton {
+    display: block;
+    margin-left: 705px;
+    margin-right: auto;
+    width: 25%;
+    padding-top: 0px;
+}
+    
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
