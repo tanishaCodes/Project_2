@@ -1,5 +1,5 @@
 <!-- NEWS WIDGET-->
-<div class="container">
+<div class="container col-sm-5">
     <div class="container news-text-center">Economic Calendar</div></div>
 
 
@@ -37,7 +37,7 @@
 
             <div class="col-3">
                 <div class="container text-center">
-                    <form class="form-inline" action="/action_page.php">
+                    <form class="form-inline">
                         <input class="form-control mr-sm-2" id="search-icon" type="text" placeholder="Search Market News">
                         <button class="btn" type="submit">Search</button>
                     </form>
@@ -51,6 +51,8 @@
 </div>
 
 <!-- TradingView Widget BEGIN -->
+<div class="col-sm-10">
+<div class="center tradingview-widget-container__widget crypto-widget" id="paddingTop">
     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
     {
     "colorTheme": "light",
@@ -61,4 +63,5 @@
     "importanceFilter": "-1,0,1"
   }
     </script>
+</div>
   <!-- TradingView Widget END -->

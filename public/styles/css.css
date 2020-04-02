@@ -102,6 +102,7 @@ body {
     flex: 50%;
     position: relative;
     padding-left: 100px;
+    padding-bottom: 100px;
       }
 /* Stock Widgets: END */
 
@@ -116,11 +117,11 @@ body {
 /* CRYPTO CURRENCY PAGE */
 /* Widgets */
 #crypto-widget {
-    width: 1000px;
-    height: 500px;
-    position: center;
-    padding-left: 500px;
-    padding-right: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 25px;
 }
 /* Crypto Currency: END */
 
@@ -151,6 +152,7 @@ body {
     padding-top: 0px;
 }
     
+/* SEARCH BUTTONS */
 
 
 /* Extra small devices (phones, 600px and down) */
