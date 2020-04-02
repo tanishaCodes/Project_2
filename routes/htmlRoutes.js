@@ -67,7 +67,7 @@ module.exports = function(app) {
 
   app.get("/login", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
-      res.render("login.html", {
+      res.render("login.handlebars", {
         msg: "Welcome!",
         examples: dbExamples
       });

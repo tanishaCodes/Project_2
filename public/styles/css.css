@@ -101,8 +101,8 @@ body {
 .stocks-watchlist  {
     flex: 50%;
     position: relative;
+    float: inline-start;
     padding-left: 100px;
-    padding-bottom: 100px;
       }
 /* Stock Widgets: END */
 

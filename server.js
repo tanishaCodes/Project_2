@@ -61,6 +61,12 @@ app.get('/profile', (req, res) => {
   });
 });
 
+app.get('/login', (req, res) => {
+  res.render('login', { 
+    title: 'Login' 
+  });
+});
+
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 

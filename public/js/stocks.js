@@ -1,3 +1,5 @@
+// ATTEMPTING TO PULL STOCK DETAILS FROM FINANCIAL API
+
 console.log("test");
 
 $("#searchForm").on("submit", function(e) {
