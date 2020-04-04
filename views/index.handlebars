@@ -1,33 +1,77 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="container">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom" id="nav">
+    <a class="navbar-brand" id="page">Dashboard</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="container text-center collapse navbar-collapse fixed-bottom col-sm-8" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/stocks">Stocks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mutualFunds">Mutual Funds</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/crypto">Crypto Currency</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/exchange">Currency Exchange</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/news">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile">Profile</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <li class="nav-item">
+            <div class="text-center">
+                <div class="container fixed-bottom">
+                    <a class="nav-link" href="/login" style="color:black">Sign Out</a>
+                </div>
+            </div>
+        </li>
+    </nav>
 </div>
 
+<script type="text/javascript">
+    new TradingView.widget(
+        {
+            "width": 1000,
+            "height": 475,
+            "symbol": "NASDAQ:AAPL",
+            "interval": "D",
+            "timezone": "America/New_York",
+            "theme": "light",
+            "style": "2",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "withdateranges": true,
+            "allow_symbol_change": true,
+            "save_image": false,
+            "watchlist": [
+                "NASDAQ:AAPL",
+                "NYSE:MMM",
+                "NASDAQ:MSFT"
+            ],
+            "details": true,
+            "container_id": "tradingview_2432d"
+        }
+    );
+</script>
+
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script src="/js/index.js"></script>

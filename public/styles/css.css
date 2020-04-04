@@ -4,7 +4,7 @@
 */
 
 html, body, div, span, applet, object, iframe,
-h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -81,20 +81,79 @@ body {
     font-size: xx-large;
 }
 
+/* DASHBOARD PAGE */
 .market-widget {
     position: left;
     width: 580px;
     height: 510px;
 }
+/* Dashboard: END */
 
-#crypto-widget {
-    width: 1000px;
-    height: 500px;
-    position: center;
-    padding-left: 0px;
-    padding-right: 1000px;
-
+/* STOCKS PAGE */
+/* Body */
+.top-stocks {
+    flex: 50%;
+    position: relative;
+    padding-left: 100px;
 }
+
+/* Widgets */
+.stocks-watchlist  {
+    flex: 50%;
+    position: relative;
+    float: inline-start;
+    padding-left: 100px;
+      }
+/* Stock Widgets: END */
+
+/* MUTUAL FUNDS */
+.soon {
+    flex: 50px;
+    position: relative;
+    padding-top: 225px;
+}
+/* Mutual Funds: END */
+
+/* CRYPTO CURRENCY PAGE */
+/* Widgets */
+#crypto-widget {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 25px;
+}
+/* Crypto Currency: END */
+
+/* CURRENCY EXCHANGE */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 25px;
+  }
+/* Currency Exchange: END */
+
+/* PROFILE PAGE */
+.text-font {
+    font-size: x-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* Profile: END */
+
+/* 404 PAGE */
+/* Button */
+.myButton {
+    display: block;
+    margin-left: 705px;
+    margin-right: auto;
+    width: 25%;
+    padding-top: 0px;
+}
+    
+/* SEARCH BUTTONS */
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
